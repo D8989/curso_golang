@@ -26,6 +26,6 @@ func main() {
 	p1 := Pessoa{"João"}
 	p2 := Pessoa{"João"}
 
-	fmt.Println("Pessoa:", p1 == p2)
+	fmt.Println("Pessoa:", p1 == p2) // compara os valores, mas são d
 
 }
