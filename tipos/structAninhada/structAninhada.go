@@ -28,7 +28,7 @@ func main() {
 			item{
 				protudoID: 1,
 				qtde:      2,
-				preco:     12.10,
+				preco:     12.10, // mais legivel
 			},
 			item{2, 1, 23.49},
 			item{11, 100, 3.13},
