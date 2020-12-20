@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func f1() { // func <nome> ( <parametros> ) <retorno> {}
+func f1() {
 	fmt.Println("F1")
 }
 
@@ -24,13 +24,12 @@ func f5() (string, string) {
 
 func main() {
 	f1()
-	f2("Param1", "param2")
+	f2("Param1", "Param2")
 
 	r3, r4 := f3(), f4("Param1", "Param2")
-
 	fmt.Println(r3)
 	fmt.Println(r4)
 
-	r51, r52 := f5()
-	fmt.Println(r51, r52)
+	r5a, r5b := f5()
+	fmt.Println(r5a, r5b)
 }

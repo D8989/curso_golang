@@ -2,10 +2,8 @@ package main
 
 import "fmt"
 
-// O 'init' é exécutado antes do main
-
 func init() {
-	fmt.Println("inicializando...")
+	fmt.Println("Inicializando...")
 }
 
 func main() {

@@ -14,16 +14,16 @@ func tipo(i interface{}) string {
 	case string:
 		return "string"
 	case func():
-		return "função"
+		return "funcao"
 	default:
-		return "não sei"
+		return "nao sei"
 	}
 }
 
 func main() {
-	fmt.Println(tipo(2.3))
+	fmt.Println(tipo(3.2))
 	fmt.Println(tipo(1))
-	fmt.Println(tipo("opa"))
+	fmt.Println(tipo("Opa"))
 	fmt.Println(tipo(func() {}))
 	fmt.Println(tipo(time.Now()))
 }

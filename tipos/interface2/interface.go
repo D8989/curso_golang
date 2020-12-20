@@ -16,14 +16,19 @@ func (f *ferrari) ligarTurbo() {
 	f.turboLigado = true
 }
 
+func ligar(e esportivo) {
+	e.ligarTurbo()
+}
+
 func main() {
-	carro1 := ferrari{"f40", false, 0}
+	carro1 := ferrari{"F40", false, 0}
 	carro1.ligarTurbo()
 
-	// como a interface modifica o objeto
-	// devemos passar a referencia do objeto
-	var carro2 esportivo = &ferrari{"F40", false, 0}
+	var carro2 esportivo = &ferrari{"F50", false, 0}
 	carro2.ligarTurbo()
 
-	fmt.Println(carro1, carro2)
+	carro3 := ferrari{"F60", false, 0}
+	ligar(&carro3)
+
+	fmt.Println(carro1, carro2, carro3)
 }

@@ -6,15 +6,16 @@ import (
 )
 
 type pessoa struct {
-	nome, sobrenome string
+	nome      string
+	sobrenome string
 }
 
 func (p pessoa) getNomeCompleto() string {
 	return p.nome + " " + p.sobrenome
 }
 
-// nescessário a referencia (*) para modificar a struct
-func (p *pessoa) setNomeCompleto(nomeCompleto string) {
+// para modificar o struct, deve-se passar o ponteiro para o receiver
+func (p *pessoa) setNomeVompleto(nomeCompleto string) {
 	partes := strings.Split(nomeCompleto, " ")
 	p.nome = partes[0]
 	p.sobrenome = partes[1]
@@ -24,6 +25,6 @@ func main() {
 	p1 := pessoa{"Pedro", "Silva"}
 	fmt.Println(p1.getNomeCompleto())
 
-	p1.setNomeCompleto("Maria Ribeiro")
+	p1.setNomeVompleto("Maria Pereira")
 	fmt.Println(p1.getNomeCompleto())
 }

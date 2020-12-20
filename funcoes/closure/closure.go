@@ -12,8 +12,8 @@ func closure() func() {
 
 func main() {
 	x := 20
-	fmt.Println(x) // 20
+	fmt.Println(x)
 
-	imprimeX := closure()
-	imprimeX() // 10
+	imprimiX := closure()
+	imprimiX()
 }

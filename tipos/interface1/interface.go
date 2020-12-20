@@ -16,13 +16,12 @@ type produto struct {
 	preco float64
 }
 
-// interfaces são implementadas IMPLICITAMENTE
 func (p pessoa) toString() string {
 	return p.nome + " " + p.sobrenome
 }
 
 func (p produto) toString() string {
-	return fmt.Sprintf("%s - R$%.2f", p.nome, p.preco)
+	return fmt.Sprintf("%s - R$ %.2f", p.nome, p.preco)
 }
 
 func imprimir(x imprimivel) {
@@ -34,10 +33,13 @@ func main() {
 	fmt.Println(coisa.toString())
 	imprimir(coisa)
 
-	coisa = produto{"Calça jeans", 79.90}
+	coisa = produto{"Calsa jeans", 179.67}
 	fmt.Println(coisa.toString())
 	imprimir(coisa)
 
-	p2 := produto{"DVD", 100.25}
+	p2 := produto{"Camisa", 39.69}
 	imprimir(p2)
+
+	p3 := pessoa{"Maria", "Bela"}
+	imprimir(p3)
 }

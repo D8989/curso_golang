@@ -5,14 +5,15 @@ import "fmt"
 func main() {
 	i := 1
 
-	// Go não existe aritmética de ponteiros
-	var p *int
+	var p *int = nil
 
-	p = &i // pegando o endereço fa variavel 'i'
-	*p++   // desreferencia o ponteiro (pega o valor)
+	p = &i // pegando o endereco de i
+
+	*p++
 	i++
 
-	// p++ -> isso não é permitido
+	// Go nao tem aritmetica de ponteiros
+	// p++
 
 	fmt.Println(p, *p, i, &i)
 }

@@ -2,14 +2,14 @@ package main
 
 import "math"
 
-// iniciando com letra maiúscula é PUBLICO (visibilidade dentro e fora do pacote.)
-// iniciando com letra minuscula é PRIVADO (visivel apenas dentro do pacote)
+// inicialicando com letra maiuscula e PUBLIC
+// inicializando com letra minuscuia e PRIVATE (dentro do PACOTE)
 
-//Por exemplo...
-// Ponto 			- gerará alfo público
-// ponto ou _Ponto 	- gerará algo privado
+// exemplo:
+// Ponto 			- gerara algo publico
+// ponto ou _Ponto 	- gerara algo privado
 
-// Ponto representa um ponto no plano cartesiano
+// Ponto representa uma coordenada no ponto cartesiano
 type Ponto struct {
 	x float64
 	y float64
@@ -21,7 +21,7 @@ func catetos(a, b Ponto) (cx, cy float64) {
 	return
 }
 
-// Distancia é responsavel por calcular a distância entre dois pontos
+// Distancia retorna a distancia entre dois pontos
 func Distancia(a, b Ponto) float64 {
 	cx, cy := catetos(a, b)
 	return math.Sqrt(math.Pow(cx, 2) + math.Pow(cy, 2))

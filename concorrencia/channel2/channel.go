@@ -5,10 +5,10 @@ import (
 	"time"
 )
 
-// Channel (canal) -  é a forma de comunicação entre goroutines
-// Channel é um tipo
+// Channel (canal) - forma de comunicacao entre as goroutines
+// channel e um tipo
 
-func doisTresQuatroVezes(base int, c chan int) {
+func doisTresQuadroVezes(base int, c chan int) {
 	time.Sleep(time.Second)
 	c <- 2 * base
 
@@ -21,13 +21,12 @@ func doisTresQuatroVezes(base int, c chan int) {
 
 func main() {
 	c := make(chan int)
-	go doisTresQuatroVezes(2, c)
-
+	go doisTresQuadroVezes(2, c)
 	fmt.Println("A")
+
 	a, b := <-c, <-c // recebendo os dados do canal
+
 	fmt.Println("B")
-
 	fmt.Println(a, b)
-
 	fmt.Println(<-c)
 }

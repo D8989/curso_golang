@@ -2,15 +2,15 @@ package main
 
 import "fmt"
 
-func compras(trab1, trab2 bool) (bool, bool, bool) {
+func comprar(trab1, trab2 bool) (bool, bool, bool) {
 	comprarTv50 := trab1 && trab2
-	comprarTv32 := trab1 != trab2 // ou exclusivo
+	comprarTv32 := trab1 != trab2
 	comprarSorvete := trab1 || trab2
 
 	return comprarTv50, comprarTv32, comprarSorvete
 }
 
 func main() {
-	tv58, tv32, sorvete := compras(true, true)
-	fmt.Printf("tv58: %t, tv32: %t, sorvete %t, saudável: %t", tv58, tv32, sorvete, !sorvete)
+	tv50, tv32, sorvete := comprar(false, false)
+	fmt.Printf("Tv50: %t, tv32: %t, Sorvete: %t, Saudavel: %t\n", tv50, tv32, sorvete, !sorvete)
 }

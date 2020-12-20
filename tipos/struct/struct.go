@@ -2,15 +2,15 @@ package main
 
 import "fmt"
 
-type produto struct { // type <nome> struct { <dados> }
+type produto struct {
 	nome     string
 	preco    float64
 	desconto float64
 }
 
-//  Metodo: função com receiver (receptor)
+// metodo: receiver
 func (p produto) precoComDesconto() float64 {
-	return p.preco * (1 - p.desconto)
+	return p.preco * (1.0 - p.desconto)
 }
 
 func main() {
@@ -22,6 +22,6 @@ func main() {
 
 	fmt.Println(produto1, produto1.precoComDesconto())
 
-	produto2 := produto{"Notebook", 1989.90, 0.10}
-	fmt.Println(produto2.precoComDesconto())
+	produto2 := produto{"Notebook", 1800.00, 0.10}
+	fmt.Println(produto2, produto2.precoComDesconto())
 }

@@ -5,18 +5,18 @@ import "fmt"
 func fatorial(n int) (int, error) {
 	switch {
 	case n < 0:
-		return -1, fmt.Errorf("Número inválido: %d", n)
+		return -1, fmt.Errorf("número inválido: %d", n)
 	case n == 0:
 		return 1, nil
 	default:
-		fatorialInterior, _ := fatorial(n - 1)
-		return n * fatorialInterior, nil
+		fatorialAnterior, _ := fatorial(n - 1)
+		return n * fatorialAnterior, nil
 	}
 }
 
 func main() {
-	resultado, _ := fatorial(5)
-	fmt.Println(resultado)
+	result, _ := fatorial(5)
+	fmt.Println(result)
 
 	_, err := fatorial(-4)
 	if err != nil {

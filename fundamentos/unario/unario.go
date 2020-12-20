@@ -7,13 +7,10 @@ func main() {
 	y := 2
 
 	// apenas postfix
-	x++ // x = x + 1
-	fmt.Println(x)
+	x++
+	y--
 
-	y-- // y = y - 1
-	fmt.Println(y)
+	fmt.Println(x, y)
 
-	// fmt.Print( x == y--) não é permitido fazer esta op dentro de uma expressão
-
-	// ! -> negação lógica
+	// a := x == y-- // nao pode utilizar unario dentro de uma expressao
 }
